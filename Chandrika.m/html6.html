@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Creative Two-Column Layout with Floats and Grid</title>
+  <style>
+    /* Grid system base */
+    .row::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    [class*="col-"] {
+      float: left;
+      padding: 20px 25px;
+      box-sizing: border-box;
+      transition: transform 0.3s ease;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      border: 2px solid transparent;
+      background-clip: padding-box; /* keeps border-radius neat */
+    }
+
+    /* Grid columns */
+    .col-1  { width: 8.33%; }
+    .col-2  { width: 16.66%; }
+    .col-3  { width: 25%; }
+    .col-4  { width: 33.33%; }
+    .col-5  { width: 41.66%; }
+    .col-6  { width: 50%; }
+    .col-7  { width: 58.33%; }
+    .col-8  { width: 66.66%; }
+    .col-9  { width: 75%; }
+    .col-10 { width: 83.33%; }
+    .col-11 { width: 91.66%; }
+    .col-12 { width: 100%; }
+
+    /* Styling */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: white;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .header, .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 30px 0;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+
+    .main {
+      background-color: #f4f4f4;
+      min-height: 420px;
+      border: 2px solid #174081;
+      position: relative;
+    }
+
+    .main h2 {
+      color: #1e37a3;
+      font-family: 'Georgia', serif;
+      font-weight: 700;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #1e359e;
+      padding-bottom: 8px;
+    }
+
+    .sidebar {
+      background-color: #ddd;
+      min-height: 420px;
+      border: 2px solid #0d3870;
+      position: relative;
+    }
+
+    .sidebar h2 {
+      color: #09165a;
+      font-family: 'Georgia', serif;
+      font-weight: 700;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #0b3d75;
+      padding-bottom: 8px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #444;
+    }
+
+    /* Hover effects */
+    .main:hover, .sidebar:hover {
+      transform: translateY(-8px);
+      border-color: #0c1a69;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+      cursor: pointer;
+    }
+
+    /* Responsive tweak for smaller screens */
+    @media (max-width: 768px) {
+      [class*="col-"] {
+        width: 100% !important;
+        float: none !important;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>My Website</h1>
+  </div>
+
+  <div class="row">
+    <div class="col-8 main">
+      <h2>Main Content</h2>
+      <p>This is the main content area. It spans 8 columns (66.66%).</p>
+      <p>Notice the subtle shadows, rounded corners, and hover effects that create a modern, dynamic look while keeping the original background colors intact.</p>
+    </div>
+    <div class="col-4 sidebar">
+      <h2>Sidebar</h2>
+      <p>This is the sidebar. It spans 4 columns (33.33%).</p>
+      <p>The accent pink border and heading color help differentiate this section creatively.</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Footer © 2025</p>
+  </div>
+
+</body>
+</html>
