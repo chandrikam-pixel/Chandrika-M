@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chandrika's Responsive Student Webpage</title>
+  <style>
+    /* --- Global Styles --- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 16px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      list-style: none;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      text-decoration: none;
+      color: #4CAF50;
+      font-weight: bold;
+    }
+    section.card {
+      background: white;
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+    h2 {
+      color: #4CAF50;
+      margin-bottom: 12px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+    button {
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid #bbb;
+      background: #fff;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+    .skills-list {
+      display: none;
+      margin-top: 10px;
+      text-align: left;
+    }
+    .skills-list label {
+      display: block;
+      margin: 6px 0;
+      cursor: pointer;
+    }
+
+    /* --- Responsive Styles --- */
+    @media screen and (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 8px;
+      }
+      button {
+        width: 100%;
+      }
+      .skills-list label {
+        font-size: 0.95rem;
+      }
+    }
+    @media screen and (max-width: 480px) {
+      header h1 {
+        font-size: 1.3rem;
+      }
+      section.card {
+        padding: 12px;
+      }
+      nav a {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Chandrika M</h1>
+    <p>BCA Student | Aspiring Developer</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#personal">Personal Info</a></li>
+      <li><a href="#journey">Study Journey</a></li>
+      <li><a href="#skills">Skills</a></li>
+    </ul>
+  </nav>
+
+  <!-- About Me Section -->
+  <section class="card" id="about">
+    <h2>About Me</h2>
+    <p>
+      Hey! I’m Chandrika — a curious BCA student who loves coding, editing, and creating.
+      I aim to make my parents proud, learn new skills every day, and grow into a tech pro 🌸💻
+    </p>
+    <img src="https://placekitten.com/400/250" alt="Sample Image">
+  </section>
+
+  <!-- Personal Info Section -->
+  <section class="card" id="personal">
+    <h2>Basic Personal Info</h2>
+    <p><strong>Name:</strong> Chandrika M</p>
+    <p><strong>Course:</strong> Bachelor of Computer Applications (BCA)</p>
+    <p><strong>Goal:</strong> Score high marks and earn my scholarship 🌟</p>
+  </section>
+
+  <!-- Study Journey Section -->
+  <section class="card" id="journey">
+    <h2>My Study Journey</h2>
+    <ul>
+      <li>🌱 Learning Programming with C</li>
+      <li>💻 Exploring Web Design & HTML/CSS</li>
+      <li>🧠 Understanding Linux & Digital Logic</li>
+      <li>📚 Aiming to score above 90% in exams</li>
+    </ul>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="card" id="skills">
+    <h2>My Skills</h2>
+    <button id="showSkillsBtn">Show My Skills</button>
+    <div class="skills-list" id="skillsList">
+      <label><input type="checkbox"> HTML</label>
+      <label><input type="checkbox"> CSS</label>
+      <label><input type="checkbox"> JavaScript</label>
+      <label><input type="checkbox"> Python</label>
+      <label><input type="checkbox"> Web Design</label>
+      <label><input type="checkbox"> C Programming</label>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Chandrika M</p>
+  </footer>
+
+  <script>
+    // Skills toggle
+    const skillsBtn = document.getElementById('showSkillsBtn');
+    const skillsList = document.getElementById('skillsList');
+
+    skillsBtn.addEventListener('click', () => {
+      if (skillsList.style.display === 'none' || skillsList.style.display === '') {
+        skillsList.style.display = 'block';
+        skillsBtn.textContent = 'Hide My Skills';
+      } else {
+        skillsList.style.display = 'none';
+        skillsBtn.textContent = 'Show My Skills';
+      }
+    });
+  </script>
+
+</body>
+</html>
