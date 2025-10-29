@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chandrika M — CV / Personal Webpage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#7dd3fc; --glass: rgba(255,255,255,0.04);
+      --maxw:1000px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial; background:linear-gradient(180deg,#071028 0%, #081225 60%); color:#e6eef6;-webkit-font-smoothing:antialiased}
+    .wrap{max-width:var(--maxw);margin:36px auto;padding:28px;border-radius:18px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:0 6px 30px rgba(2,6,23,0.7);}
+
+    .top{display:flex;gap:20px;align-items:center}
+    .avatar{width:112px;height:112px;border-radius:18px;flex:0 0 112px;background:linear-gradient(135deg,var(--accent),#5eead4);display:grid;place-items:center;font-weight:800;font-size:34px;color:#022;}
+    .head {flex:1}
+    h1{font-family:'Playfair Display',serif;margin:0;font-size:28px}
+    h2{margin:4px 0;color:var(--muted);font-weight:600}
+
+    .meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+    .pill{background:var(--glass);padding:8px 12px;border-radius:999px;font-size:13px;color:var(--muted);border:1px solid rgba(255,255,255,0.02)}
+
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:24px;margin-top:24px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,0.03)}
+
+    .about p{margin:0 0 10px 0;color: #d8eaf6;line-height:1.5}
+
+    .section-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .skill{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:8px;font-weight:600;font-size:13px}
+
+    .exp{display:flex;flex-direction:column;gap:10px}
+    .job{display:flex;gap:12px}
+    .job .meta{font-size:13px;color:var(--muted)}
+
+    .projects{display:grid;gap:10px}
+    .proj{padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));border:1px solid rgba(255,255,255,0.02)}
+
+    .contact-list{display:flex;flex-direction:column;gap:8px}
+    a.cta{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#60a5fa);color:#022;font-weight:700;text-decoration:none}
+
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* responsive */
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr;}
+      .avatar{width:96px;height:96px}
+    }
+
+    /* print-friendly */
+    @media print{
+      body{background:white;color:black}
+      .wrap{box-shadow:none;border-radius:0;border:none}
+      a.cta{display:none}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap" role="main">
+    <header class="top">
+      <div class="avatar">C</div>
+      <div class="head">
+        <h1>Chandrika M — <span style="font-weight:400;font-size:16px">BCA Student &amp; Beginner Developer</span></h1>
+        <h2>Web · C · SQL · Linux · UX basics</h2>
+        <div class="meta">
+          <div class="pill">Location: India</div>
+          <div class="pill">Email: your.email@cchandrika702@gmail.com</div>
+          <div class="pill">Phone: +91 9xxxxxxx29</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <section class="card about">
+        <div class="section-title"><strong>About</strong><span style="color:var(--muted);font-size:13px">Open to internships · Happy to learn</span></div>
+        <p>I'm a curious BCA student who loves to weave logic and design — building small web apps, practicing C programs, exploring Linux, and crafting simple, usable interfaces. I learn fast, ship often, and care about clean code and kind UX.</p>
+
+        <div style="margin-top:12px" class="section-title"><strong>Skills</strong><span style="color:var(--muted);font-size:13px">Tools & tech</span></div>
+        <div class="skills">
+          <div class="skill">HTML &amp; CSS</div>
+          <div class="skill">JavaScript (basics)</div>
+          <div class="skill">C programming</div>
+          <div class="skill">SQL</div>
+          <div class="skill">Linux</div>
+          <div class="skill">Git</div>
+        </div>
+
+        <div style="margin-top:14px" class="section-title"><strong>Education</strong><span style="color:var(--muted);font-size:13px">2025 — BCA (in progress)</span></div>
+        <div class="exp">
+          <div>
+            <strong>RV University (placeholder)</strong>
+            <div class="meta">Expected: 2025 — Relevant coursework: Programming, Web, Digital Logic, UX</div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px" class="section-title"><strong>Experience / Projects</strong><span style="color:var(--muted);font-size:13px">classwork • personal</span></div>
+        <div class="projects">
+          <div class="proj">
+            <strong>Hospital Management DB (SQL)</strong>
+            <div class="meta">Designed schema, joins, queries for patient reports and billing — SQL practice project.</div>
+          </div>
+          <div class="proj">
+            <strong>Knowledge &amp; Origami (Game)</strong>
+            <div class="meta">A screen-free educational game idea that unlocks origami steps via Q&amp;A — concept + rules.</div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="card">
+        <div class="section-title"><strong>Contact</strong><span style="color:var(--muted);font-size:13px">Let's connect</span></div>
+        <div class="contact-list">
+          <div>Email: <a href="mailto:email@my mail.com">emailcchandrika702@gmail.com</a></div>
+          <div>LinkedIn: <a href="#">www.linkedin.com/in/chandrikamreddy</a></div>
+          <div>GitHub: <a href="#">github.com/yourhandle</a></div>
+          <div>Phone: +91 9xxxxxxx29</div>
+        </div>
+
+        <div style="margin-top:14px" class="section-title"><strong>Quick links</strong></div>
+        <a class="cta" href="#projects">See projects</a>
+
+        <div style="margin-top:14px">
+          <strong>Languages</strong>
+          <div class="meta">English • Hindi</div>
+        </div>
+
+        <div style="margin-top:14px">
+          <strong>Interests</strong>
+          <div class="meta"> Coding, trading,Editing ,Learning new things</div>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      Made with curiosity ✨ 
+    </footer>
+  </main>
+</body>
+</html>
